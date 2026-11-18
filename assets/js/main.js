@@ -442,43 +442,48 @@ function initBreathworkExperience() {
 const dailyInspirationsList = [
   {
     quote: "Peace begins when we return to ourselves.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Inner Peace"
   },
   {
     quote: "Love is not something we seek outside; it is something we awaken within.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Love"
   },
   {
     quote: "Be still, abide in truth, and allow life to unfold.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Truth"
   },
   {
     quote: "Silence is not the absence of sound, but the presence of your deepest nature.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Stillness"
   },
   {
     quote: "When you touch the present moment deeply, you touch eternity.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Mindfulness"
   },
   {
     quote: "Your heart already knows the truth; meditation is simply listening to its song.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Self-Discovery"
   },
   {
     quote: "The quietest lake reflects the clearest sky. Calm your mind, and you will see your own radiance.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Inner Clarity"
   },
   {
     quote: "Bliss is not a destination to reach. It is the very fabric of your inner truth and peace.",
-    author: "Rita Rai",
+    author: "Ritambhara Ma",
     category: "Bliss & Awakening"
+  },
+  {
+    quote: "To love yourself is to honor the sacred divine presence dwelling quietly within your own heart.",
+    author: "Ritambhara Ma",
+    category: "Self Love"
   }
 ];
 
@@ -589,7 +594,7 @@ const modalityDetails = {
     pillars: [
       'Uncovering the patterns and conditionings that cloud your natural truth and clarity.',
       'Developing deep observational presence of truth without harsh self-judgment.',
-      'Recognizing your true nature rooted in Truth, Love, Bliss, Peace, and Spiritual Awakening.'
+      'Recognizing your true nature rooted in All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening.'
     ],
     invitation: 'Step into a safe, compassionate sanctuary where you are heard completely and guided back to your innate truth.'
   },
@@ -613,7 +618,7 @@ const modalityDetails = {
     pillars: [
       'Navigating the shifts of identity with grace, patience, and stability.',
       'Integrating profound spiritual insights into your practical everyday life.',
-      'Connecting with the universal source of divine love, bliss, and unity.'
+      'Connecting with the universal source of all-embracing love, uncaused happiness, fulfilling peace, and spiritual awakening.'
     ],
     invitation: 'Walk this sacred threshold with loving companionship, grounded wisdom, and steady spiritual orientation.'
   },
@@ -625,7 +630,7 @@ const modalityDetails = {
     pillars: [
       'Softening the harsh internal dialogue of perfectionism and unworthiness.',
       'Embracing both your shadows and your luminous gifts with equal tenderness.',
-      'Cultivating boundaries born out of profound self-respect and peaceful strength.'
+      'Cultivating freedom born out of profound self-respect and peaceful strength.'
     ],
     invitation: 'Reclaim your birthright of warmth and discover the joy of being wholly at peace in your own skin.'
   },
@@ -639,7 +644,19 @@ const modalityDetails = {
       'Mindful communication rooted in deep listening and authentic presence.',
       'Living with intentionality, gratitude, and effortless simplicity.'
     ],
-    invitation: 'Infuse your everyday existence with radiant truth and the subtle bliss of being fully awake.'
+    invitation: 'Infuse your everyday existence with effortless awareness and the fulfilling peace of being fully awake.'
+  },
+  'spiritual-map': {
+    title: 'The Map of Spirituality & Timeless Wisdom',
+    eyebrow: 'Universal Contemplative Traditions',
+    quote: 'Many are the sacred paths, but the summit of Truth is one, eternal, and already within you.',
+    description: 'Throughout the ages, enlightened Saints, Seers, Yogis, and Buddhas explored the boundless depths of consciousness and charted sacred maps to the Ultimate Truth. This guidance is devoted to exploring what they realized within themselves—the ever-new, eternal wisdom. Whether you are called to Zen, Tao, Patanjali Yoga, the classical Yogic paths of Jnana (wisdom), Bhakti (devotion), Karma (selfless action), and Raja (meditative absorption), or the profound non-dual insights of Advaita Vedanta, Kashmir Shaivism, Avadhuta Tradition, Shakta Advait, Sahaja Yoga, and Neo-Advaita, Ritambhara Ma helps you navigate the spiritual landscape to find and walk your authentic path.',
+    pillars: [
+      'Understanding the core realizations and universal maps charted by Saints, Seers, Yogis, and Buddhas.',
+      'Navigating classical traditions—Advaita Vedanta, Kashmir Shaivism, Avadhuta Tradition, Sahaja Yoga, and Yogic paths—to discover your natural resonance.',
+      'Translating timeless contemplative philosophy into direct personal awakening, inner stillness, and lived truth.'
+    ],
+    invitation: 'Step into sacred dialogue with Ritambhara Ma to clarify your spiritual compass, explore the perennial wisdom of the masters, and walk your unique path home to Truth.'
   }
 };
 modalityDetails['inner-awareness'] = modalityDetails['inner-truth'];
@@ -821,26 +838,25 @@ function initNewsletterForm() {
   const form = document.getElementById('newsletterForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', () => {
     const input = form.querySelector('.newsletter-input');
     const toast = document.getElementById('toastNotice');
 
-    if (input && input.value.includes('@')) {
-      if (toast) {
-        const originalText = toast.textContent;
-        toast.textContent = 'Blessings. You are now subscribed to sacred reflections.';
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-          toast.textContent = originalText;
-        }, 3600);
-      }
-      input.value = '';
-      if (window.playSingingBowlChime) {
-        window.playSingingBowlChime(432);
-      }
+    if (toast) {
+      const originalText = toast.textContent;
+      toast.textContent = 'Blessings. Connecting you with Ritambhara Ma on Substack...';
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+        toast.textContent = originalText;
+      }, 4000);
     }
+    if (window.playSingingBowlChime) {
+      window.playSingingBowlChime(432);
+    }
+    setTimeout(() => {
+      if (input) input.value = '';
+    }, 800);
   });
 }
 
@@ -873,24 +889,36 @@ function initScrollAnimations() {
 }
 
 /* ==========================================================================
-   12. BACK TO TOP BUTTON
+   12. BACK TO TOP & FLOATING SANCTUARY TALK BUTTON
    ========================================================================== */
 function initBackToTop() {
   const btn = document.getElementById('backToTopBtn');
-  if (!btn) return;
+  const talkBtn = document.getElementById('floatingTalkBtn');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 450) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (btn) {
+      if (scrollY > 450) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }
+    if (talkBtn) {
+      if (scrollY > 350) {
+        talkBtn.classList.add('visible');
+      } else {
+        talkBtn.classList.remove('visible');
+      }
     }
   }, { passive: true });
 
-  btn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (btn) {
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 }

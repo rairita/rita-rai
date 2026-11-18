@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RITA RAI — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
+   RITAMBHARA MA — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
    Design System & Master Stylesheet
    ========================================================================== */
 
@@ -29,6 +29,16 @@
   --color-sage-light: #EBF0E8;
   --color-sage-pale: #F2F5F0;
   --color-sage-dark: #44543F;
+
+  /* Sacred Violet & Lavender Accents (Harmonizing with profile photo's purple flora) */
+  --color-violet: #845B96;
+  --color-violet-light: #F3EBF7;
+  --color-violet-pale: #F9F4FA;
+  --color-violet-dark: #5B326D;
+  --color-violet-rich: #6E3F84;
+  --color-violet-gradient: linear-gradient(135deg, #A86BBF 0%, #845B96 50%, #5B326D 100%);
+  --color-violet-subtle: rgba(132, 91, 150, 0.12);
+  --color-violet-border: rgba(132, 91, 150, 0.28);
 
   /* Blush Pink & Lavender Accents */
   --color-blush: #E8C8C1;
@@ -401,17 +411,17 @@ p.lead {
   display: flex;
   align-items: center;
   transition: var(--transition-normal);
-  background: rgba(250, 247, 242, 0.82);
+  background: rgba(250, 247, 251, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+  border-bottom: 1px solid rgba(126, 75, 150, 0.14);
 }
 
 .site-header.scrolled {
   height: 74px;
-  background: rgba(250, 247, 242, 0.94);
-  box-shadow: 0 4px 24px rgba(44, 38, 33, 0.05);
-  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+  background: rgba(250, 247, 251, 0.96);
+  box-shadow: 0 4px 24px rgba(41, 33, 49, 0.06);
+  border-bottom: 1px solid rgba(126, 75, 150, 0.20);
 }
 
 .nav-container {
@@ -427,6 +437,22 @@ p.lead {
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(197, 160, 89, 0.35);
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  flex-shrink: 0;
+}
+
+.brand:hover .brand-logo-img {
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.55);
 }
 
 .brand-lotus {
@@ -466,7 +492,7 @@ p.lead {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: clamp(1rem, 1.8vw, 2rem);
   list-style: none;
 }
 
@@ -578,7 +604,7 @@ p.lead {
   overflow: hidden;
   padding-top: calc(var(--nav-height) + 2rem);
   padding-bottom: 5rem;
-  background-color: #171513;
+  background-color: #1a1612;
 }
 
 .hero-bg-wrapper {
@@ -591,14 +617,15 @@ p.lead {
   overflow: hidden;
 }
 
+/* Hero Background & Atmosphere */
 .hero-bg-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
-  opacity: 0.82;
+  opacity: 0.85;
   filter: saturate(1.12) contrast(1.05);
-  transform: scale(1.04);
+  transform: scale(1.03);
   animation: heroZoom 28s ease-out infinite alternate;
 }
 
@@ -607,7 +634,7 @@ p.lead {
   100% { transform: scale(1.1); }
 }
 
-/* Warm ethereal atmospheric overlays (Direction 2: Atmospheric & Mystical) */
+/* Warm ethereal atmospheric overlays (Nepal Sunrise over Machapuchare) */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -631,6 +658,12 @@ p.lead {
   pointer-events: none;
 }
 
+.hero-section .container {
+  max-width: 960px;
+  position: relative;
+  z-index: 5;
+}
+
 .hero-content {
   position: relative;
   z-index: 3;
@@ -638,6 +671,33 @@ p.lead {
   max-width: 860px;
   margin: 0 auto;
   color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+  .hero-overlay {
+    background: 
+      radial-gradient(ellipse at 50% 40%, rgba(240, 222, 178, 0.45) 0%, rgba(28, 23, 19, 0.68) 60%, rgba(15, 13, 11, 0.95) 100%),
+      linear-gradient(180deg, rgba(20, 18, 15, 0.35) 0%, rgba(20, 18, 15, 0.45) 50%, rgba(250, 247, 242, 0.92) 90%, #FAF7F2 100%);
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+  }
+  .hero-role-pill {
+    padding: 0.38rem 1rem;
+    max-width: 94vw;
+  }
+  .hero-role-pill span {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+  .hero-booking-badge {
+    max-width: 94vw;
+  }
+  .hero-booking-badge .badge-inner-pill {
+    padding: 0.48rem 1rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
 }
 
 .hero-badge-pill {
@@ -663,31 +723,23 @@ p.lead {
   color: var(--color-gold-dark);
 }
 
-/* Sacred Living Aura Container & Glows (Direction 2) */
+/* Sacred Central Hero Title Container */
 .hero-title-container {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   max-width: 100%;
 }
 
-/* Subtle Sacred Lotus Crown Crest */
-.hero-brand-crest {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.65rem;
-  opacity: 0.9;
-}
-
 .hero-crest-lotus {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   color: var(--color-gold-light);
-  filter: drop-shadow(0 2px 10px rgba(197, 160, 89, 0.45));
+  filter: drop-shadow(0 2px 10px rgba(201, 149, 79, 0.45));
+  margin-bottom: 0.6rem;
   animation: lotusBreath 6s ease-in-out infinite alternate;
 }
 
@@ -703,8 +755,8 @@ p.lead {
   width: 130%;
   height: 160%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at center, rgba(235, 215, 170, 0.42) 0%, rgba(197, 160, 89, 0.2) 42%, rgba(197, 160, 89, 0) 75%);
-  filter: blur(32px);
+  background: radial-gradient(ellipse at center, rgba(240, 222, 178, 0.40) 0%, rgba(197, 160, 89, 0.20) 42%, transparent 75%);
+  filter: blur(34px);
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
@@ -718,7 +770,7 @@ p.lead {
   width: 108%;
   height: 125%;
   transform: translate(-50%, -50%);
-  border: 1px solid rgba(224, 207, 167, 0.22);
+  border: 1px solid rgba(220, 195, 235, 0.25);
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
@@ -753,7 +805,7 @@ p.lead {
   position: relative;
   z-index: 1;
   font-family: var(--font-heading);
-  font-size: clamp(3.6rem, 8vw, 6.4rem);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
   font-weight: 400;
   line-height: 1.05;
   margin: 0;
@@ -762,16 +814,16 @@ p.lead {
 
 .hero-title-text {
   display: inline-block;
-  background: linear-gradient(180deg, #FFFFFF 15%, #FFFDF8 38%, #F7EAD0 65%, #E5C992 88%, #C5A059 100%);
+  background: linear-gradient(180deg, #FFFFFF 15%, #FFFDF8 38%, #F7EAD0 65%, #E8C98E 88%, #C9954F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #FFFFFF;
-  filter: drop-shadow(0 4px 22px rgba(18, 14, 10, 0.85)) drop-shadow(0 0 38px rgba(224, 207, 167, 0.45));
+  filter: drop-shadow(0 4px 22px rgba(26, 17, 36, 0.75)) drop-shadow(0 0 38px rgba(232, 201, 142, 0.45));
   transition: filter var(--transition-normal);
 }
 
 .hero-title:hover .hero-title-text {
-  filter: drop-shadow(0 4px 26px rgba(18, 14, 10, 0.95)) drop-shadow(0 0 52px rgba(224, 207, 167, 0.7));
+  filter: drop-shadow(0 4px 26px rgba(26, 17, 36, 0.95)) drop-shadow(0 0 52px rgba(232, 201, 142, 0.7));
 }
 
 /* Tapered Gold Hairline & Celestial Star Divider */
@@ -804,7 +856,7 @@ p.lead {
   100% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 14px rgba(224, 207, 167, 1); }
 }
 
-/* Suitably Positioned Role Subtitle Below Rita Rai */
+/* Suitably Positioned Role Subtitle Below Ritambhara Ma */
 .hero-role-pill {
   display: inline-flex;
   align-items: center;
@@ -862,9 +914,178 @@ p.lead {
   line-height: 1.85;
   color: rgba(253, 251, 247, 0.94);
   max-width: 680px;
-  margin: 0 auto 2.4rem;
+  margin: 0 auto 2.2rem;
   font-weight: 300;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* ==========================================================================
+   SOFT & SUITABLE "GENTLE LOUD" SACRED BOOKING & TALK INVITATIONS
+   ========================================================================== */
+
+/* Hero Booking Luminous Badge */
+.hero-booking-badge {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  margin: 0 auto 1.8rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hero-booking-badge .badge-inner-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.58rem 1.45rem;
+  background: rgba(28, 22, 17, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(240, 224, 160, 0.6);
+  border-radius: var(--radius-full);
+  color: #FFFDF9;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.3), 0 0 20px rgba(224, 207, 167, 0.25);
+  transition: all var(--transition-normal);
+}
+
+.hero-booking-badge .badge-inner-pill strong {
+  color: var(--color-gold-light);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 12px rgba(224, 207, 167, 0.7);
+}
+
+.hero-booking-badge .badge-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gold-light);
+  box-shadow: 0 0 10px rgba(240, 224, 160, 1);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-booking-badge .badge-pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold-light);
+  animation: badgeDotRipple 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+@keyframes badgeDotRipple {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.hero-booking-badge .badge-arrow-icon {
+  color: var(--color-gold-light);
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.hero-booking-badge:hover .badge-inner-pill {
+  background: rgba(28, 22, 17, 0.82);
+  border-color: rgba(255, 248, 220, 0.95);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.4), 0 0 32px rgba(224, 207, 167, 0.55);
+  transform: translateY(-2px);
+}
+
+.hero-booking-badge:hover .badge-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* "Gentle Loud" Hero Talk Button with Breathing Golden Halo */
+.btn-hero-talk {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.95rem 2.2rem;
+  box-shadow: 0 6px 26px rgba(197, 160, 89, 0.45), 0 0 0 1px rgba(255, 248, 220, 0.5);
+  animation: gentleLoudPulse 4s ease-in-out infinite;
+}
+
+.btn-hero-talk:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 38px rgba(197, 160, 89, 0.7), 0 0 0 2px rgba(255, 248, 220, 0.9);
+  animation: none;
+}
+
+@keyframes gentleLoudPulse {
+  0%, 100% {
+    box-shadow: 0 6px 24px rgba(197, 160, 89, 0.4), 0 0 0 1px rgba(255, 248, 220, 0.45), 0 0 18px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 10px 34px rgba(197, 160, 89, 0.7), 0 0 0 2px rgba(255, 248, 220, 0.85), 0 0 32px rgba(212, 175, 55, 0.5);
+  }
+}
+
+/* Floating "Talk with Me" Sanctuary Button */
+.floating-talk-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 95;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.72rem 1.35rem;
+  border-radius: var(--radius-full);
+  background: rgba(28, 22, 17, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(224, 207, 167, 0.6);
+  color: #FFFDF9;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32), 0 0 18px rgba(197, 160, 89, 0.3);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+
+.floating-talk-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.floating-talk-btn .floating-talk-lotus {
+  width: 17px;
+  height: 17px;
+  color: var(--color-gold-light);
+  flex-shrink: 0;
+}
+
+.floating-talk-btn .floating-talk-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gold-light);
+  box-shadow: 0 0 8px var(--color-gold-light);
+  animation: starPulse 2.5s ease-in-out infinite alternate;
+}
+
+.floating-talk-btn:hover {
+  background: rgba(28, 22, 17, 0.96);
+  border-color: rgba(255, 248, 220, 0.95);
+  color: #FFFFFF;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 28px rgba(224, 207, 167, 0.55);
 }
 
 .hero-cta-group {
@@ -978,7 +1199,7 @@ p.lead {
    8. SACRED INSPIRATION TICKER / AURA BAR
    -------------------------------------------------------------------------- */
 .aura-bar {
-  background: linear-gradient(90deg, #F5EFE6 0%, #FAF7F2 50%, #F5EFE6 100%);
+  background: linear-gradient(90deg, #F3ECF8 0%, #FAF7FB 50%, #F3ECF8 100%);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   padding: 1.2rem 0;
@@ -1033,11 +1254,11 @@ p.lead {
 
 .about-image-frame {
   position: relative;
-  border-radius: 260px 260px 30px 30px;
+  border-radius: 36px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg), var(--shadow-gold);
-  border: 8px solid #FFFFFF;
-  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-lg), 0 12px 38px rgba(197, 160, 89, 0.28);
+  border: 6px solid #FFFFFF;
+  aspect-ratio: 1 / 1;
   background-color: var(--color-bg-sand);
 }
 
@@ -1045,42 +1266,42 @@ p.lead {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-image-wrapper:hover .about-portrait {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 /* Ornamental framing accents */
 .about-frame-border {
   position: absolute;
-  top: -16px;
-  left: -16px;
-  right: 16px;
-  bottom: 16px;
+  top: -14px;
+  left: -14px;
+  right: 14px;
+  bottom: 14px;
   border: 1px solid var(--color-gold);
-  border-radius: 270px 270px 40px 40px;
+  border-radius: 44px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.65;
+  opacity: 0.6;
 }
 
 .about-badge-floating {
   position: absolute;
-  bottom: 24px;
-  right: -20px;
+  bottom: -18px;
+  right: -12px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 1.1rem 1.4rem;
-  box-shadow: var(--shadow-md);
+  padding: 0.95rem 1.3rem;
+  box-shadow: var(--shadow-md), 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  max-width: 240px;
+  max-width: 250px;
   z-index: 2;
   animation: floatSlow 6s ease-in-out infinite;
 }
@@ -1139,13 +1360,17 @@ p.lead {
   margin-bottom: 1.2rem;
 }
 
-/* 4 Guiding Values */
+/* 5 Guiding Values */
 .guiding-pillars {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+}
+
+.guiding-pillars .pillar-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .pillar-card {
@@ -1973,6 +2198,176 @@ p.lead {
 }
 
 /* --------------------------------------------------------------------------
+   14B. SEEKER REFLECTIONS (VOICES OF THE HEART / PRAISE SECTION)
+   -------------------------------------------------------------------------- */
+.testimonials-section {
+  background-color: var(--color-bg-ivory);
+  padding: 7rem 0;
+  position: relative;
+  border-top: 1px solid var(--border-light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 2.2rem 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold-border);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+
+.testimonial-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F5EFE6 0%, #E8DCBF 100%);
+  border: 2px solid var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-dark);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.16);
+  overflow: hidden;
+}
+
+.testimonial-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.testimonial-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.testimonial-body {
+  position: relative;
+  margin-bottom: 1.4rem;
+  flex-grow: 1;
+}
+
+.testimonial-quote-mark {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-gold-light);
+  opacity: 0.35;
+  position: absolute;
+  top: -1rem;
+  left: -0.4rem;
+  pointer-events: none;
+}
+
+.testimonial-text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding-left: 0.5rem;
+  font-style: italic;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  gap: 0.5rem;
+}
+
+.testimonial-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--color-sage-pale);
+  color: var(--color-sage-dark);
+}
+
+.testimonial-verified {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.testimonial-verified svg {
+  color: var(--color-gold);
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 1.8rem 1.4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    15. SACRED JOURNAL / NEWSLETTER SECTION
    -------------------------------------------------------------------------- */
 .newsletter-section {
@@ -2027,6 +2422,41 @@ p.lead {
   grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
   gap: clamp(2rem, 4vw, 4rem);
   margin-bottom: 4rem;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo-img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(224, 207, 167, 0.6);
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.35);
+  transition: transform 0.5s ease;
+  flex-shrink: 0;
+}
+
+.footer-brand-header:hover .footer-logo-img {
+  transform: scale(1.08);
+}
+
+.footer-brand-header .brand-title {
+  color: #FFFFFF;
+  font-size: 1.7rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.1;
+}
+
+.footer-brand-header .brand-subtitle {
+  color: var(--color-gold-light);
+  margin-bottom: 0;
 }
 
 .footer-brand .brand-title {
@@ -2297,6 +2727,10 @@ body.js-enabled .fade-in-element.is-visible {
   .brand {
     gap: 0.65rem;
   }
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+  }
   .brand-lotus {
     width: 26px;
     height: 26px;
@@ -2340,7 +2774,7 @@ body.js-enabled .fade-in-element.is-visible {
     right: 0;
     width: 280px;
     height: 100vh;
-    background: #FAF7F2;
+    background: #FAF7FB;
     flex-direction: column;
     align-items: flex-start;
     padding: calc(var(--nav-height) + 1.5rem) 2.2rem 2.2rem;
@@ -2402,25 +2836,23 @@ body.js-enabled .fade-in-element.is-visible {
     letter-spacing: 0.12em;
   }
   .hero-role-pill {
-    padding: 0.36rem 0.95rem;
-    max-width: 95vw;
+    padding: 0.32rem 0.75rem;
+    max-width: 92vw;
     margin-top: 0.65rem;
     margin-bottom: 0.4rem;
   }
   .hero-role-pill span {
-    font-size: clamp(0.56rem, 2.35vw, 0.68rem);
-    letter-spacing: 0.08em;
+    font-size: clamp(0.52rem, 2.1vw, 0.64rem);
+    letter-spacing: 0.05em;
     white-space: nowrap;
-  }
-  .hero-brand-crest {
-    margin-bottom: 0.35rem;
   }
   .hero-crest-lotus {
     width: 28px;
     height: 28px;
   }
   .hero-title {
-    font-size: clamp(2.4rem, 10vw, 3.2rem);
+    font-size: clamp(1.85rem, 7.8vw, 2.5rem);
+    letter-spacing: 0.03em;
   }
   .hero-brand-divider {
     max-width: 180px;
@@ -2430,9 +2862,50 @@ body.js-enabled .fade-in-element.is-visible {
     font-size: clamp(1.25rem, 5vw, 1.55rem);
   }
   .hero-description {
-    font-size: 0.98rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.6rem;
+  }
+  .hero-booking-badge {
+    display: inline-flex;
+    width: auto;
+    max-width: 92vw;
+    margin-bottom: 1.3rem;
+  }
+  .hero-booking-badge .badge-inner-pill {
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+    padding: 0.44rem 0.85rem;
+    font-size: 0.72rem;
+    gap: 0.4rem;
+  }
+  .floating-talk-btn {
+    bottom: 1.25rem;
+    left: 1rem;
+    padding: 0.58rem 1.05rem;
+    font-size: 0.8rem;
+    gap: 0.45rem;
+  }
+  .about-image-wrapper {
+    max-width: 330px;
+  }
+  .about-badge-floating {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    bottom: -18px;
+    padding: 0.75rem 1.1rem;
+    max-width: 260px;
+    width: max-content;
+    gap: 0.65rem;
+    animation: none;
+  }
+  .about-badge-text strong {
+    font-size: 0.85rem;
+  }
+  .about-badge-text span {
+    font-size: 0.68rem;
   }
   .hero-cta-group {
     flex-direction: column;
