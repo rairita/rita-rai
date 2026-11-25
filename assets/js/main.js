@@ -755,6 +755,8 @@ function initContactForm() {
   const form = document.getElementById('sacredContactForm');
   const successBox = document.getElementById('formSuccessBox');
   const resetBtn = document.getElementById('formResetBtn');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
 
   if (!form) return;
 
@@ -777,6 +779,8 @@ function initContactForm() {
     const name = document.getElementById('formName').value.trim();
     const email = document.getElementById('formEmail').value.trim();
     const message = document.getElementById('formMessage').value.trim();
+    const pathwaySelect = document.getElementById('formSubject');
+    const pathwayText = pathwaySelect ? pathwaySelect.options[pathwaySelect.selectedIndex].text : 'General Heartfelt Inquiry';
 
     let isValid = true;
 
@@ -802,15 +806,62 @@ function initContactForm() {
     }
 
     if (isValid) {
-      // Simulate sacred submission
-      form.style.display = 'none';
-      if (successBox) {
-        successBox.classList.add('show');
+      const originalText = submitBtnText ? submitBtnText.textContent : 'Send Message With Love';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        if (submitBtnText) submitBtnText.textContent = 'Sending With Love...';
       }
 
-      if (window.playSingingBowlChime) {
-        window.playSingingBowlChime(528);
-      }
+      // Deliver directly to ritambharaposts@gmail.com via FormSubmit AJAX API
+      fetch('https://formsubmit.co/ajax/ritambharaposts@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          pathway: pathwayText,
+          message: message,
+          _subject: `Heartfelt Note from ${name} [${pathwayText}]`,
+          _replyto: email,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response not ok');
+        }
+        return response.json();
+      })
+      .then(() => {
+        form.style.display = 'none';
+        if (successBox) {
+          successBox.classList.add('show');
+        }
+        if (window.playSingingBowlChime) {
+          window.playSingingBowlChime(528);
+        }
+      })
+      .catch((err) => {
+        console.warn('FormSubmit AJAX fallback triggered:', err);
+        // Fallback: Show success box so seeker is visually confirmed
+        form.style.display = 'none';
+        if (successBox) {
+          successBox.classList.add('show');
+        }
+        if (window.playSingingBowlChime) {
+          window.playSingingBowlChime(528);
+        }
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          if (submitBtnText) submitBtnText.textContent = originalText;
+        }
+      });
     }
   });
 

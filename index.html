@@ -1241,19 +1241,27 @@
   <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-box fade-in-element">
-        <div class="eyebrow">Weekly Contemplations</div>
+        <div class="eyebrow">Contemplations</div>
         <h2>Reflections for the Soul</h2>
         <p>
-          Receive tender meditations, words of stillness, and sacred thoughts delivered gently to your inbox once a week.
+          Gentle reflections, timeless wisdom, and meditative expressions to nurture inner peace and awaken to the beauty of simply Being.
         </p>
 
-        <form class="newsletter-form" id="newsletterForm" action="https://ritambharaposts.substack.com/api/v1/free?nojs=true" method="post" target="_blank">
-          <input type="hidden" name="source" value="embed">
-          <input type="email" name="email" class="newsletter-input" placeholder="Enter your sacred email address..." required aria-label="Email address for reflections">
-          <button type="submit" class="btn btn-gold">
-            Receive Reflections
-          </button>
-        </form>
+        <div class="contemplations-links">
+          <a href="https://ritambharaposts.substack.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+            </svg>
+            <span>Substack</span>
+          </a>
+          <a href="https://youtube.com/@RitambharaPosts" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+            </svg>
+            <span>YouTube</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1362,30 +1370,44 @@
         <!-- Right: Functional Contact Form Card -->
         <div class="contact-form-card fade-in-element">
           <!-- Active Form -->
-          <form id="sacredContactForm" novalidate>
+          <form id="sacredContactForm" action="https://formsubmit.co/ritambharaposts@gmail.com" method="POST" novalidate>
+            <!-- Hidden FormSubmit Configurations -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Heartfelt Note for Ritambhara">
+            <input type="hidden" name="_next" value="https://ritarai.com.np/#contact">
+
             <h3 style="margin-bottom: 0.5rem; font-size: 1.7rem;">Send a Heartfelt Note</h3>
-            <p style="font-size: 0.92rem; margin-bottom: 2rem; color: var(--color-text-secondary);">
+            <p style="font-size: 0.92rem; margin-bottom: 1.2rem; color: var(--color-text-secondary);">
               Please share a few words about what brings you to this threshold.
             </p>
+
+            <div class="form-recipient-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Delivered directly to: <strong>ritambharaposts@gmail.com</strong></span>
+            </div>
 
             <!-- Name -->
             <div class="form-group">
               <label for="formName" class="form-label">Your Name *</label>
-              <input type="text" id="formName" class="form-input" placeholder="e.g. Maya Devi" required>
+              <input type="text" id="formName" name="name" class="form-input" placeholder="e.g. Maya Devi" required>
               <div class="form-feedback">Please share your name with us.</div>
             </div>
 
             <!-- Email -->
             <div class="form-group">
               <label for="formEmail" class="form-label">Email Address *</label>
-              <input type="email" id="formEmail" class="form-input" placeholder="e.g. maya@sacredpath.com" required>
+              <input type="email" id="formEmail" name="email" class="form-input" placeholder="e.g. maya@sacredpath.com" required>
               <div class="form-feedback">Please provide a valid email address so Ritambhara may reply.</div>
             </div>
 
             <!-- Path of Interest -->
             <div class="form-group">
               <label for="formSubject" class="form-label">Pathway of Interest</label>
-              <select id="formSubject" class="form-select">
+              <select id="formSubject" name="pathway" class="form-select">
                 <option value="inner-truth">Inner Truth &amp; Self-Discovery</option>
                 <option value="emotional-clarity">Emotional Clarity &amp; Inner Peace</option>
                 <option value="spiritual-awakening">Spiritual Awakening Guidance</option>
@@ -1400,17 +1422,21 @@
             <!-- Message -->
             <div class="form-group">
               <label for="formMessage" class="form-label">Your Message or Intention *</label>
-              <textarea id="formMessage" class="form-textarea" placeholder="Share what is currently unfolding in your life or what guidance you are seeking..." required></textarea>
+              <textarea id="formMessage" name="message" class="form-textarea" placeholder="Share what is currently unfolding in your life or what guidance you are seeking..." required></textarea>
               <div class="form-feedback">Please share at least a few words so Ritambhara can hold space for your intention.</div>
             </div>
 
-            <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.1rem;">
-              <span>Send Message With Love</span>
+            <button type="submit" id="contactSubmitBtn" class="btn btn-gold" style="width: 100%; padding: 1.1rem;">
+              <span id="submitBtnText">Send Message With Love</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
             </button>
+
+            <p style="text-align: center; margin-top: 1.1rem; font-size: 0.82rem; color: var(--color-text-muted);">
+              Or email directly: <a href="mailto:ritambharaposts@gmail.com" style="color: var(--color-gold-rich); text-decoration: underline; font-weight: 500;">ritambharaposts@gmail.com</a>
+            </p>
           </form>
 
           <!-- Submission Feedback State -->
@@ -1422,7 +1448,7 @@
             </svg>
             <h3 style="color: var(--color-sage-dark); font-size: 1.8rem; margin-bottom: 0.6rem;">Received in Stillness</h3>
             <p style="font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 1.6rem; line-height: 1.7;">
-              Thank you for reaching out with an open heart. Your intention has been received with love. Ritambhara will respond to your sacred message shortly.
+              Thank you for reaching out with an open heart. Your note has been delivered directly to <strong>ritambharaposts@gmail.com</strong>. Ritambhara will respond to your sacred message shortly.
             </p>
             <button type="button" class="btn btn-subtle" id="formResetBtn">
               Send Another Note

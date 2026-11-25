@@ -2339,6 +2339,29 @@ p.lead {
   box-shadow: var(--shadow-md);
 }
 
+.form-recipient-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  background: rgba(197, 160, 89, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.6rem;
+}
+
+.form-recipient-badge svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.form-recipient-badge strong {
+  color: var(--color-gold-rich);
+  font-weight: 600;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -2608,6 +2631,15 @@ p.lead {
 .newsletter-box {
   max-width: 640px;
   margin: 0 auto;
+}
+
+.contemplations-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .newsletter-form {
