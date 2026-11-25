@@ -1,6 +1,6 @@
-# Ritambhara Ma — Luxury Spiritual Portfolio & Sanctuary Website
+# Ritambhara — Luxury Spiritual Portfolio & Sanctuary Website
 
-A luxury, aesthetic, responsive personal portfolio website for **Ritambhara Ma**, Spiritual Counsellor and Meditation Guide.
+A luxury, aesthetic, responsive personal portfolio website for **Ritambhara**, Spiritual Counsellor and Meditation Guide.
 
 The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effortless Awareness**, **Fulfilling Peace**, and **Spiritual Awakening**.
 
@@ -26,7 +26,7 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
 ## 🏛️ Website Sections & Architecture
 
 1. **Header & Sticky Navigation**:
-   - Sacred lotus emblem with wordmark "Ritambhara Ma — Connecting With Love".
+   - Sacred lotus emblem with wordmark "Ritambhara — Connecting With Love".
    - Links: Home, About, Spiritual Counselling, Meditation, Inspirations, Reflections, Contact.
    - Built-in **Tibetan Singing Bowl Soundscape Toggle** (synthesized in real-time via Web Audio API, 0 external mp3 dependencies).
    - "Talk with Me" gentle quick CTA.
@@ -36,10 +36,10 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
    - Ultra-high resolution photograph of the realistic Nepali Himalayas at vivid golden dawn (Machapuchare / Fishtail, Annapurna massif, and deep rolling emerald-green mist-filled foothills).
    - Golden dust motes particle canvas simulating sacred sunlight.
    - **Living Sacred Aura & Brand Crest**: Gentle breathing golden halo, celestial orbital ring, and sacred lotus crown emblem.
-   - Headline: *"Ritambhara Ma"* styled with champagne-gold sunrise gradient typography, high-editorial tracking, and a tapered gold star divider.
+   - Headline: *"Ritambhara"* styled with champagne-gold sunrise gradient typography, high-editorial tracking, and a tapered gold star divider.
    - Role badge directly below: *"Spiritual Counsellor & Meditation Guide"*.
-   - Tagline: *"Awaken to the Beauty Within."*
-   - Supporting text: *"A sacred journey devoted to All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening."*
+   - Tagline: *"Awaken to the Sacred Beauty of Simply Being."*
+   - Supporting text: *"A Gentle Unfolding into All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening."*
    - **"Gentle Loud" Sacred Booking / Talk Invitation**: Luminous frosted glass badge (*"Private Sessions Open · Talk with Me in Stillness →"*) with animated breathing golden halo primary CTA (*"Talk with Me in Stillness"*).
    - CTAs: *"Explore My Journey"* & *"Talk with Me in Stillness"*.
    - **Sanctuary Micro-Pills**: Ethereal frosted glass path indicators (*Inner Stillness · Heart Awakening · Conscious Living*).
@@ -48,10 +48,11 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
 3. **Sacred Aura Bar**:
    - Subtle intention ticker: *All-embracing Love ✦ Uncaused Happiness ✦ Effortless Awareness ✦ Fulfilling Peace ✦ Spiritual Awakening*.
 
-4. **About Me ("A Journey Within")**:
-   - Authentic portrait of Ritambhara Ma framed with an editorial arch, gold trim, and floating sanctuary badge.
+4. **About Me ("A Journey Within") & My Guru ("Pathik")**:
+   - Authentic portrait of Ritambhara framed with an editorial arch, gold trim, and floating sanctuary badge.
    - Personal philosophy and exact introductory narrative rooted in All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening.
    - 5 Guiding Pillars: *All-embracing Love*, *Uncaused Happiness*, *Effortless Awareness*, *Fulfilling Peace*, *Spiritual Awakening*.
+   - **My Guru, My Guiding Light ("PATHIK")**: Reverent dedication and portrait of enlightened master and visionary spiritual guide Pathik, honoring the sacred lineage of wisdom, grace, and inner awakening.
 
 5. **Spiritual Counselling ("Guidance for the Soul")**:
    - 5 beautifully designed offering cards:
@@ -74,7 +75,7 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
 
 7. **Philosophy & Inspirations ("Wisdom for the Soul")**:
    - Curated timeless teachings on All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening.
-   - Verified quotations with attributions: Pathik (Patron of Pathik Foundation Nepal), Sri Ramana Maharshi, Jalāl al-Dīn Rūmī, Lao Tzu, Sri Nisargadatta Maharaj, and Ritambhara Ma.
+   - Verified quotations with attributions: Pathik (Patron of Pathik Foundation Nepal), Sri Ramana Maharshi, Jalāl al-Dīn Rūmī, Lao Tzu, Sri Nisargadatta Maharaj, and Ritambhara.
    - Interactive theme filter tabs (All, Love, Peace Within, Truth & Awakening, Sages).
 
 8. **Voices of the Heart ("Seeker Reflections")**:
@@ -82,10 +83,10 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
    - Elegant avatar badges, star ratings, and thematic pillar tags.
 
 9. **Sacred Reflections Journal**:
-   - Weekly contemplation newsletter integrated directly with Ritambhara Ma's Substack publication (`lovethewayhome.substack.com`).
+   - Weekly contemplation newsletter integrated directly with Ritambhara's Substack publication (`ritambharaposts.substack.com`).
 
 10. **Contact Section ("Let's Connect")**:
-    - Contact channels: Email (`ritambharaposts@gmail.com`), Substack (`lovethewayhome.substack.com`), YouTube (`@LoveTheWayHome`), Facebook (`@LoveTheWayHome`), and Google Blogger (`lovethewayhome.blogspot.com`).
+    - Contact channels: Email (`ritambharaposts@gmail.com`), Substack (`ritambharaposts.substack.com`), YouTube (`@RitambharaPosts`), Facebook (`@RitambharaPosts`), and Google Blogger (`ritambharaposts.blogspot.com`).
     - Functional contact form ("Send a Heartfelt Note") with "Your Name" field, client-side validation, and confirmation view.
     - Path of Interest selector mapped to counselling modalities.
 
@@ -148,4 +149,4 @@ rita-rai-website/
 
 ---
 
-*“Awaken to the Beauty Within.”* — Ritambhara Ma
+*“Awaken to the Sacred Beauty of Simply Being.”* — Ritambhara

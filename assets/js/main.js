@@ -1,5 +1,5 @@
 /**
- * RITA RAI — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
+ * RITAMBHARA — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
  * Interactive Engine & Experience Controller
  */
 
@@ -442,47 +442,47 @@ function initBreathworkExperience() {
 const dailyInspirationsList = [
   {
     quote: "Peace begins when we return to ourselves.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Inner Peace"
   },
   {
     quote: "Love is not something we seek outside; it is something we awaken within.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Love"
   },
   {
     quote: "Be still, abide in truth, and allow life to unfold.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Truth"
   },
   {
     quote: "Silence is not the absence of sound, but the presence of your deepest nature.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Stillness"
   },
   {
     quote: "When you touch the present moment deeply, you touch eternity.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Mindfulness"
   },
   {
     quote: "Your heart already knows the truth; meditation is simply listening to its song.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Self-Discovery"
   },
   {
     quote: "The quietest lake reflects the clearest sky. Calm your mind, and you will see your own radiance.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Inner Clarity"
   },
   {
     quote: "Bliss is not a destination to reach. It is the very fabric of your inner truth and peace.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Bliss & Awakening"
   },
   {
     quote: "To love yourself is to honor the sacred divine presence dwelling quietly within your own heart.",
-    author: "Ritambhara Ma",
+    author: "Ritambhara",
     category: "Self Love"
   }
 ];
@@ -650,13 +650,13 @@ const modalityDetails = {
     title: 'The Map of Spirituality & Timeless Wisdom',
     eyebrow: 'Universal Contemplative Traditions',
     quote: 'Many are the sacred paths, but the summit of Truth is one, eternal, and already within you.',
-    description: 'Throughout the ages, enlightened Saints, Seers, Yogis, and Buddhas explored the boundless depths of consciousness and charted sacred maps to the Ultimate Truth. This guidance is devoted to exploring what they realized within themselves—the ever-new, eternal wisdom. Whether you are called to Zen, Tao, Patanjali Yoga, the classical Yogic paths of Jnana (wisdom), Bhakti (devotion), Karma (selfless action), and Raja (meditative absorption), or the profound non-dual insights of Advaita Vedanta, Kashmir Shaivism, Avadhuta Tradition, Shakta Advait, Sahaja Yoga, and Neo-Advaita, Ritambhara Ma helps you navigate the spiritual landscape to find and walk your authentic path.',
+    description: 'Throughout the ages, enlightened Saints, Seers, Yogis, and Buddhas explored the boundless depths of consciousness and charted sacred maps to the Ultimate Truth. This guidance is devoted to exploring what they realized within themselves—the ever-new, eternal wisdom. Whether you are called to Zen, Tao, Patanjali Yoga, the classical Yogic paths of Jnana (wisdom), Bhakti (devotion), Karma (selfless action), and Raja (meditative absorption), or the profound non-dual insights of Advaita Vedanta, Kashmir Shaivism, Avadhuta Tradition, Shakta Advait, Sahaja Yoga, and Neo-Advaita, Ritambhara helps you navigate the spiritual landscape to find and walk your authentic path.',
     pillars: [
       'Understanding the core realizations and universal maps charted by Saints, Seers, Yogis, and Buddhas.',
       'Navigating classical traditions—Advaita Vedanta, Kashmir Shaivism, Avadhuta Tradition, Sahaja Yoga, and Yogic paths—to discover your natural resonance.',
       'Translating timeless contemplative philosophy into direct personal awakening, inner stillness, and lived truth.'
     ],
-    invitation: 'Step into sacred dialogue with Ritambhara Ma to clarify your spiritual compass, explore the perennial wisdom of the masters, and walk your unique path home to Truth.'
+    invitation: 'Step into sacred dialogue with Ritambhara to clarify your spiritual compass, explore the perennial wisdom of the masters, and walk your unique path home to Truth.'
   }
 };
 modalityDetails['inner-awareness'] = modalityDetails['inner-truth'];
@@ -844,7 +844,7 @@ function initNewsletterForm() {
 
     if (toast) {
       const originalText = toast.textContent;
-      toast.textContent = 'Blessings. Connecting you with Ritambhara Ma on Substack...';
+      toast.textContent = 'Blessings. Connecting you with Ritambhara on Substack...';
       toast.classList.add('show');
       setTimeout(() => {
         toast.classList.remove('show');

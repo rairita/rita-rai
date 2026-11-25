@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RITAMBHARA MA — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
+   RITAMBHARA — LUXURY SPIRITUAL PORTFOLIO & SANCTUARY
    Design System & Master Stylesheet
    ========================================================================== */
 
@@ -856,7 +856,7 @@ p.lead {
   100% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 14px rgba(224, 207, 167, 1); }
 }
 
-/* Suitably Positioned Role Subtitle Below Ritambhara Ma */
+/* Suitably Positioned Role Subtitle Below Ritambhara */
 .hero-role-pill {
   display: inline-flex;
   align-items: center;
@@ -1336,6 +1336,67 @@ p.lead {
   color: var(--color-text-primary);
 }
 
+/* Portrait Photo Wrapper */
+.about-photo-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Revered Quote Card by Rumi */
+.about-portrait-invitation {
+  position: relative;
+  margin-top: 2.2rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(250, 246, 238, 0.92) 100%);
+  border: 1px solid var(--color-gold-border);
+  border-left: 3.5px solid var(--color-gold);
+  border-radius: 14px 24px 24px 14px;
+  padding: 1.6rem 1.8rem 1.4rem;
+  box-shadow: 0 14px 38px rgba(197, 160, 89, 0.16), 0 4px 14px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+}
+
+.about-portrait-invitation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 46px rgba(197, 160, 89, 0.22), 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtle background quotation mark watermark */
+.about-portrait-invitation::after {
+  content: '“';
+  position: absolute;
+  top: -15px;
+  right: 18px;
+  font-family: var(--font-heading);
+  font-size: 6.5rem;
+  line-height: 1;
+  color: rgba(197, 160, 89, 0.12);
+  pointer-events: none;
+}
+
+.invitation-quote-body {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.4vw, 1.32rem);
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  font-style: italic;
+  margin: 0 0 0.8rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.invitation-author {
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-gold-rich);
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
 /* About Narrative */
 .about-content {
   position: relative;
@@ -1411,6 +1472,165 @@ p.lead {
   font-size: 0.82rem;
   line-height: 1.45;
   color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   MY GURU TRIBUTE SECTION ("PATHIK — MY GURU, MY GUIDING LIGHT")
+   ========================================================================== */
+.guru-tribute-container {
+  margin-top: clamp(4.5rem, 8vw, 6.5rem);
+  position: relative;
+}
+
+.guru-tribute-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.guru-tribute-divider .divider-line {
+  height: 1px;
+  width: clamp(60px, 15vw, 160px);
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold) 50%, transparent 100%);
+  opacity: 0.7;
+}
+
+.guru-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* Guru Portrait Frame */
+.guru-image-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 440px;
+  width: 100%;
+}
+
+.guru-image-frame {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 16px 42px rgba(197, 160, 89, 0.28);
+  border: 6px solid #FFFFFF;
+  aspect-ratio: 0.86 / 1;
+  background-color: var(--color-bg-sand);
+}
+
+.guru-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.guru-image-wrapper:hover .guru-portrait {
+  transform: scale(1.03);
+}
+
+.guru-frame-border {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid var(--color-gold);
+  border-radius: 38px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.guru-badge-floating {
+  position: absolute;
+  bottom: -16px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  box-shadow: var(--shadow-md), 0 8px 24px rgba(197, 160, 89, 0.22);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 270px;
+  z-index: 2;
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.guru-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-gold-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-rich);
+  flex-shrink: 0;
+}
+
+.guru-badge-text {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--color-text-secondary);
+}
+
+.guru-badge-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-rich);
+}
+
+/* Guru Content (Usual text style like Ritambhara About info) */
+.guru-content {
+  position: relative;
+}
+
+/* Core Guru Highlight Realization ("Pleasantly Distinct Look") */
+.guru-highlight-quote {
+  position: relative;
+  margin: 1.8rem 0;
+  padding: 1.15rem 1.6rem;
+  border-left: 3px solid var(--color-gold);
+  background: linear-gradient(90deg, rgba(238, 228, 210, 0.5) 0%, rgba(255, 255, 255, 0.45) 60%, transparent 100%);
+  border-radius: 0 16px 16px 0;
+}
+
+.guru-highlight-quote p {
+  font-family: var(--font-heading);
+  font-size: clamp(1.16rem, 1.38vw, 1.34rem);
+  line-height: 1.65;
+  color: var(--color-text-primary);
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+}
+
+.guru-highlight-quote strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-rich);
+  font-style: normal;
+}
+
+.guru-closing-dedication {
+  font-family: var(--font-heading);
+  font-size: clamp(1.08rem, 1.25vw, 1.22rem);
+  line-height: 1.65;
+  color: var(--color-gold-rich);
+  margin-top: 1.3rem;
+  font-style: italic;
 }
 
 /* --------------------------------------------------------------------------
@@ -2245,27 +2465,34 @@ p.lead {
 }
 
 .testimonial-avatar {
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   background: linear-gradient(135deg, #F5EFE6 0%, #E8DCBF 100%);
-  border: 2px solid var(--color-gold-light);
+  border: 2.5px solid var(--color-gold-border);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-gold-dark);
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.16);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.2);
   overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.testimonial-card:hover .testimonial-avatar {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(197, 160, 89, 0.28);
 }
 
 .testimonial-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 22%;
   display: block;
 }
 
@@ -2704,6 +2931,14 @@ body.js-enabled .fade-in-element.is-visible {
   .about-badge-floating {
     right: 10px;
     bottom: -15px;
+  }
+  .guru-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .guru-badge-floating {
+    right: 10px;
+    bottom: -12px;
   }
   .sanctuary-inner {
     grid-template-columns: 1fr;
