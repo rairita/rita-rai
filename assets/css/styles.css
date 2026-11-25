@@ -1958,7 +1958,14 @@ p.lead {
   border-color: var(--color-gold);
 }
 
-/* 5 Meditation Practice Cards */
+/* Dedicated Panel: Counselling after Meditation */
+.meditation-offerings-section {
+  background-color: var(--color-bg-cream);
+  border-top: 1px solid var(--border-light);
+  position: relative;
+}
+
+/* Meditation Practice Cards */
 .meditation-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2337,6 +2344,7 @@ p.lead {
   border: 1px solid var(--border-light);
   padding: clamp(2rem, 4vw, 3.2rem);
   box-shadow: var(--shadow-md);
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
 .form-recipient-badge {
