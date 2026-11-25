@@ -2465,8 +2465,8 @@ p.lead {
 }
 
 .testimonial-avatar {
-  width: 68px;
-  height: 68px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   background: linear-gradient(135deg, #F5EFE6 0%, #E8DCBF 100%);
   border: 2.5px solid var(--color-gold-border);
@@ -2475,7 +2475,7 @@ p.lead {
   justify-content: center;
   color: var(--color-gold-dark);
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   box-shadow: 0 4px 14px rgba(197, 160, 89, 0.2);
