@@ -38,7 +38,7 @@ The website communicates **All-embracing Love**, **Uncaused Happiness**, **Effor
    - **Living Sacred Aura & Brand Crest**: Gentle breathing golden halo, celestial orbital ring, and sacred lotus crown emblem.
    - Headline: *"Ritambhara"* styled with champagne-gold sunrise gradient typography, high-editorial tracking, and a tapered gold star divider.
    - Role badge directly below: *"Spiritual Counsellor & Meditation Guide"*.
-   - Tagline: *"Awaken to the Sacred Beauty of Simply Being."*
+   - Tagline: *"Awaken to the Beauty Within."*
    - Supporting text: *"A Gentle Unfolding into All-embracing Love, Uncaused Happiness, Effortless Awareness, Fulfilling Peace & Spiritual Awakening."*
    - **"Gentle Loud" Sacred Booking / Talk Invitation**: Luminous frosted glass badge (*"Private Sessions Open · Talk with Me in Stillness →"*) with animated breathing golden halo primary CTA (*"Talk with Me in Stillness"*).
    - CTAs: *"Explore My Journey"* & *"Talk with Me in Stillness"*.
@@ -149,4 +149,4 @@ rita-rai-website/
 
 ---
 
-*“Awaken to the Sacred Beauty of Simply Being.”* — Ritambhara
+*“Awaken to the Beauty Within.”* — Ritambhara
