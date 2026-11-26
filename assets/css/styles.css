@@ -456,14 +456,30 @@ p.lead {
 }
 
 .brand-lotus {
-  width: 32px;
-  height: 32px;
-  color: var(--color-gold);
-  transition: transform 0.6s ease;
+  width: 42px;
+  height: 42px;
+  color: var(--color-gold-rich);
+  flex-shrink: 0;
+  animation: lotusGentleFloat 4.5s ease-in-out infinite;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.brand:hover .brand-lotus {
-  transform: rotate(20deg) scale(1.06);
+@keyframes lotusGentleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg) scale(1);
+    filter: drop-shadow(0 2px 6px rgba(197, 160, 89, 0.38));
+  }
+  50% {
+    transform: translateY(-2.5px) rotate(4deg) scale(1.06);
+    filter: drop-shadow(0 4px 12px rgba(197, 160, 89, 0.62));
+  }
+}
+
+.brand:hover .brand-lotus,
+.footer-brand-header:hover .brand-lotus {
+  animation-play-state: paused;
+  transform: rotate(16deg) scale(1.12);
+  filter: drop-shadow(0 4px 14px rgba(197, 160, 89, 0.7));
 }
 
 .brand-text {
@@ -3007,8 +3023,8 @@ body.js-enabled .fade-in-element.is-visible {
     height: 38px;
   }
   .brand-lotus {
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
   }
   .brand-title {
     font-size: 1.35rem;
