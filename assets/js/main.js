@@ -705,9 +705,9 @@ function initModalityModal() {
       if (subjectSelect) {
         subjectSelect.value = key;
       }
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
+      const heartfeltNoteSection = document.getElementById('send-heartfelt-note') || document.getElementById('contact');
+      if (heartfeltNoteSection) {
+        heartfeltNoteSection.scrollIntoView({ behavior: 'smooth' });
       }
     };
 
